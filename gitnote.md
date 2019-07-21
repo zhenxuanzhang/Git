@@ -2,7 +2,7 @@
 - [.gitignore](#1)
 
 
-##1 .gitignore
+1 .gitignore
 
 
 	使用场合：
