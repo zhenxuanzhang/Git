@@ -1,5 +1,5 @@
 # git配置
-- [.gitignore](# .gitignore)
+- [.gitignore](##.gitignore)
 
 
 ## .gitignore
