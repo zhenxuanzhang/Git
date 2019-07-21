@@ -1,8 +1,8 @@
 # git配置
-- [.gitignore](##.gitignore)
+- [.gitignore](#1)
 
 
-## .gitignore
+##1 .gitignore
 
 
 	使用场合：
