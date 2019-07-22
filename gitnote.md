@@ -1,4 +1,5 @@
 # git配置
+<<<<<<< HEAD
 
 
 ---
@@ -6,6 +7,12 @@
 
 ---
 ## 1.gitignore
+=======
+- [.gitignore](#1)
+
+
+1 .gitignore
+>>>>>>> 660b8519ffee048a2452f3c99ade441e8fdb8c33
 
 
 	使用场合：
@@ -49,3 +56,7 @@
 	# 存储凭证
 	git config –-global credential.helper wincred
 
+<<<<<<< HEAD
+=======
+## 
+>>>>>>> 660b8519ffee048a2452f3c99ade441e8fdb8c33
