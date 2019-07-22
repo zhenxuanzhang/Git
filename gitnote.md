@@ -38,9 +38,14 @@
 	git config –-global core.safecrlf false
 
 ## 3.别名
+
 	# 以图形的方式打印 Git 提交日志
 	git log –pretty=format:’%h %ad | %s%d’ –graph –date=short
 
 	# 设置别名
 	git config –-global alias.ci commit
+	
 ## 4.凭证
+	# 存储凭证
+	git config –-global credential.helper wincred
+
