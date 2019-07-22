@@ -1,19 +1,15 @@
 # git配置
-<<<<<<< HEAD
 
 
 ---
 - [.gitignore](#1gitignore)
 
 ---
+
+
 ## 1.gitignore
-=======
-- [.gitignore](#1)
 
-
-1 .gitignore
->>>>>>> 660b8519ffee048a2452f3c99ade441e8fdb8c33
-
+1 .gitignore   
 
 	使用场合：
 	忽略操作系统自动生成的文件，比如：缩略图，等；
@@ -55,8 +51,3 @@
 ## 4.凭证
 	# 存储凭证
 	git config –-global credential.helper wincred
-
-<<<<<<< HEAD
-=======
-## 
->>>>>>> 660b8519ffee048a2452f3c99ade441e8fdb8c33
