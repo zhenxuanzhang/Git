@@ -2,14 +2,23 @@
 
 
 ---
-- [.gitignore](#1gitignore)
-
+## 目录
+* [gitignore](#gitignore)
+* [换行符](#换行符)
+* [别名](#别名)
+* [凭证](#凭证)
+* [git基本操作](#git基本操作)
+	* [git](#git)
+	* [git blame](#git blame)
+	* [git clean](#git clean)
+	* [git add](#git add)
+	* [git commit](#git commit)
 ---
 
 
-## 1.gitignore
+## gitignore
 
-1 .gitignore   
+
 
 	使用场合：
 	忽略操作系统自动生成的文件，比如：缩略图，等；
@@ -27,7 +36,7 @@
 - [我的testignore库](https://github.com/zhenxuanzhang/testignore)
 - [github官方gitignore库](https://github.com/github/gitignore)
 
-## 2.换行符
+## 换行符
 
 	# CR: carriage return 回车，光标到首行， ‘\r’ = return
 	# LF: line feed 换行，光标下移一行，’\n’ = newline
@@ -41,7 +50,7 @@
 	git config –-global core.safecrlf false
 
 
-## 3.别名
+## 别名
 
 	# 以图形的方式打印 Git 提交日志
 	git log –pretty=format:’%h %ad | %s%d’ –graph –date=short
@@ -49,13 +58,13 @@
 	git config –-global alias.ci commit
 
 	
-## 4.凭证  
+## 凭证  
 
 	# 存储凭证
 	git config –-global credential.helper wincred
 
 
-## 5.git基本操作
+## git基本操作
 
 ### git  
 	# git 常用命令信息
@@ -90,7 +99,7 @@
 ![](gitnote_files/2.jpg)
 
 
-### git add
+### git add  
 
 	# 添加新文件
 	git add a
@@ -118,7 +127,6 @@
 	git st
 ---
 	# 一个文件多个提交
-	
 	原文件已被提交
 	然后对一个文件作多处修改，不用git add a
 	git add –p a
@@ -134,5 +142,39 @@
 	git add -p a
 	...
 	
+	git show HEAD
+	git show HEAD^
 	
+	
+### git commit  
+
+	# add & commit mothed 1
+	git add . 
+	git commit –m “message”
+	# add & commit mothed 2
+	git commit –a –m “message”
+
+	# add & commit mothed 3
+	git commit –am “message”
+
+---
+	每个提交要保证适当的颗粒度、相关性和独立性。
+	- 以一个小功能、小改进或一个 bug fix 为单位  
+	- 对应的 unit test 程序在同一个 commit  
+	- 无相关的修改不在同一个 commit  
+	- 语法错误的半成品程序不能 commit 
+
+---
+
+![](gitnote_files/3.jpg)
+![](gitnote_files/4.jpg)
+
+---
+[git commit文档规范](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+
+
+
+
+
+
 
