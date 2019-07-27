@@ -2,22 +2,23 @@
 
 
 ---
-## 目录
+# 目录
 * [gitignore](#gitignore)
 * [换行符](#换行符)
 * [别名](#别名)
 * [凭证](#凭证)
 * [git基本操作](#git基本操作)
 	* [git](#git)
-	* [git blame](#git blame)
-	* [git clean](#git clean)
-	* [git add](#git add)
-	* [git commit](#git commit)
+	* [git blame](#gitblame)
+	* [git clean](#gitclean)
+	* [git add](#gitadd)
+	* [git commit](#gitcommit)
+	* [回撤](#回撤)
 ---
 
 
 ## gitignore
-
+* [目录](#目录)
 
 
 	使用场合：
@@ -65,6 +66,7 @@
 
 
 ## git基本操作
+* [目录](#目录)
 
 ### git  
 	# git 常用命令信息
@@ -74,7 +76,7 @@
 	git help -a
 
 
-### git blame
+### gitblame
 
 	# 逐行查看文件的修改历史
 	git blame <file name>
@@ -85,7 +87,7 @@
 
 ![](gitnote_files/1.jpg)
 
-### git clean
+### gitclean
 
 	# 列出打算清除的档案
 	git clean -n
@@ -99,7 +101,8 @@
 ![](gitnote_files/2.jpg)
 
 
-### git add  
+### gitadd  
+* [目录](#目录)
 
 	# 添加新文件
 	git add a
@@ -146,7 +149,8 @@
 	git show HEAD^
 	
 	
-### git commit  
+### gitcommit  
+* [目录](#目录)
 
 	# add & commit mothed 1
 	git add . 
@@ -172,9 +176,81 @@
 ---
 [git commit文档规范](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
+### 信息查看
+* [目录](#目录)
+
+	# short and branch
+	git status -sb
+
+	# 查看某个提交信息
+	git show HEAD
+	git shou harshvalue # 查看哈希值对应的提交
+
+- git show HEAD^^ #查看上一个提交的信息
+- git show HEAD^^ #查看前面第二个提交
+- git show HEAD~2 #查看前面第3个提交
+---
+
+	# 查看提交历史  
+	git log <file name>  
+	git log --grep <msg>  
+	git log -n  
+
+- 只想看某一类记录
+- git log --grep <msg>
+- 只看前几次记录
+- git log -n
+
+### gitdiff
+
+![](gitnote_files/5.jpg)  
+
+	cat a
+	111
+	222
+	333
+	444
+	555
+	666
+	777
+	
+	7次修改，每次向下增加一行，第六次修改在暂存区，
+	第七次修改在工作目录，前5次修改已经提交了。
+- git diff 工作目录与暂存区的差异，以暂存区为基准  
+	+777
+- git diff -cached 暂存区与最后一次提交版本的差异  
+	+666
+- git diff HEAD 工作目录与最后一次提交版本的差异  
+	+666  
+	+777
+- git diff hash2 hash4 第四个版本与第二个版本的差异，以第二个版本为基准  
+	+333  
+	+444
+- 或者用HEAD定位
+- git diff HEAD~3 HEAD~1 第四个版本与第二个版本的差异，以第二个版本为基准  
+	+333   
+	+444
+- git tag maint HEAD~4 给第一次提交打上标签
+- git diff maint 查看工作目录与第一次提交的差异
+- git diff -cached maint 暂存区与第一次提交版本的差异
 
 
+## 回撤
+* [目录](#目录)
 
+![](gitnote_files/6.jpg)
 
+	# 回撤暂存区内容到工作目录
+	git reset HEAD
 
+	# 回撤提交到暂存区
+	git reset HEAD --soft
 
+	# 回撤提交，放弃变更
+	git reset HEAD –-hard
+
+	# 回撤远程仓库，-f  即 --force
+	git push -f
+	!慎用此行
+	
+- 
