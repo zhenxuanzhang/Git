@@ -102,7 +102,8 @@
 
 
 ### gitadd  
-* [目录](#目录)
+* [目录](#目录)    
+
 
 	# 添加新文件
 	git add a
@@ -150,7 +151,8 @@
 	
 	
 ### gitcommit  
-* [目录](#目录)
+* [目录](#目录)    
+
 
 	# add & commit mothed 1
 	git add . 
@@ -177,7 +179,8 @@
 [git commit文档规范](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
 ### 信息查看
-* [目录](#目录)
+* [目录](#目录)   
+
 
 	# short and branch
 	git status -sb
