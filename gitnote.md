@@ -1,12 +1,13 @@
-# git配置
+# 
 
 
 ---
 # 目录
-* [gitignore](#gitignore)
-* [换行符](#换行符)
-* [别名](#别名)
-* [凭证](#凭证)
+* [git配置](#git配置)
+	* [gitignore](#gitignore)
+	* [换行符](#换行符)
+	* [别名](#别名)
+	* [凭证](#凭证)
 * [git基本操作](#git基本操作)
 	* [git](#git)
 	* [git blame](#gitblame)
@@ -14,8 +15,10 @@
 	* [git add](#gitadd)
 	* [git commit](#gitcommit)
 	* [回撤](#回撤)
+	* [git tag](#gittag)
 ---
 
+# git配置
 
 ## gitignore
 * [目录](#目录)
@@ -243,6 +246,7 @@
 
 ![](gitnote_files/6.jpg)
 
+---
 	# 回撤暂存区内容到工作目录
 	git reset HEAD
 
@@ -256,4 +260,34 @@
 	git push -f
 	!慎用此行
 	
-- 
+## gittag
+
+---
+
+	# 在当前提交上，打标签 foo
+	git tag foo 
+
+	# 在当前提交上，打标签 foo，并给 message 信息注释
+	git tag foo –m “message”
+	git show foo 显示message
+
+	# 在当前提交之前的第 4 个版本上，打标签 foo
+	git tag foo HEAD~4
+	git tag foo hashvalue
+
+	# 列出所有标签
+	git tag
+
+	# 删除标签
+	git tag -d foo
+	
+	# 把标签推送到远程仓库
+	git push origin --tags
+
+	# 把标签推送到远程仓库
+	git push origin v0.1
+
+	# 本地已经删除标签，要删除远程仓库的标签
+	git push origin :refs/tags/foo
+	
+---
