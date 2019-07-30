@@ -291,3 +291,98 @@
 	git push origin :refs/tags/foo
 	
 ---
+
+## gitbranch
+
+---
+	# 创建分支 foo
+	git branch foo   
+		
+	# 切换到分支 foo
+	git checkout foo
+
+	# 创建分支并同时切换到 foo，一步做到
+	git checkout -b foo
+
+	# 修改分支名字
+	git branch –m old_name new_name
+	git branch –M old_name new_name   
+		
+	# 删除分支 foo
+	git branch -d foo
+	Git branch –D foo
+
+	# 列出远程分支
+	git branch -r
+
+	# 查看已合并的分支
+	git branch --merged
+	git branch --no-merged
+		
+	# 列出远程合并的分支
+	git branch -r --merged
+
+	# 取出远程 foo 分支
+	git checkout –t origin/foo
+
+	# 删除远程分支
+	git push origin <space>:<remote branch>
+	git fetch -p
+		
+	# 合并分支
+	git merge <branch name>
+
+	# 合并分支，拒绝 fast forward，产生合并 commit
+	git merge –-no-ff
+
+---
+
+## 冲突解决
+
+	要点：
+	在不同分支上，修改同一个文件；
+	不同的人，修改了同一个文件；
+	不同的仓库，修改了同一个文件；
+	冲突只在合并分支的时候才会发生；
+	发生冲突并不可怕，冲突的代码不会丢失；
+	解决冲突，重新提交，commit 时不要给 message；
+	冲突信息的格式；
+
+
+## gitstash
+
+- 某一个分支上做修改，但不想提交，然后又想切换分支，则把该分支的文件放到临时暂存区
+
+
+	# 保存进度
+	git stash
+		
+	# 弹出进度
+	git stash pop
+
+	# 查看 stash 列表
+	git stash list
+
+	# 删除 stash 列表
+	git stash clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
