@@ -16,6 +16,10 @@
 	* [git commit](#gitcommit)
 	* [回撤](#回撤)
 	* [git tag](#gittag)
+	* [git branch](#gitbranch)
+	* [冲突](#冲突)
+	* [git stash](#gitstash)
+	* 
 ---
 
 # git配置
@@ -337,7 +341,7 @@
 
 ---
 
-## 冲突解决
+## 冲突
 
 	要点：
 	在不同分支上，修改同一个文件；
@@ -353,7 +357,7 @@
 
 - 某一个分支上做修改，但不想提交，然后又想切换分支，则把该分支的文件放到临时暂存区
 
-
+---  
 	# 保存进度
 	git stash
 		
@@ -366,7 +370,7 @@
 	# 删除 stash 列表
 	git stash clear
 
-
+---
 
 
 
